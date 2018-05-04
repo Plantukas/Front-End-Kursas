@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <title>Namu Darbai 4</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        /*Header*/
+        header {
+            background-image: url(https://i.imgur.com/ikeJdAm.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            height: 100%;
+        }
+        .header-content {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+        }
+        h1, q {
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            font-weight: 900;
+            text-shadow: 0px 0px 15px #000;
+        }
+        /*Navigation*/
+        .navbar {
+            overflow: hidden;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+        .navbar a {
+            display: block;
+            float: left;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 900;
+            text-shadow: 0px 0px 15px #000;
+            color: white;
+            text-align: center;
+            width: 25%;
+            text-decoration: none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 0px;
+        }
+        a:hover{
+            background-color: gray;
+
+        }
+        /*About*/
+        .about-content {
+            background-color: black;
+            background-size: 100%;
+            height: 825px;
+        }
+        .about-image {
+            width: 450px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+        .about-heading {
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .about-paragraph {
+            color: white;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-right: 150px;
+            padding-bottom: 50px;
+            padding-left: 150px;
+            letter-spacing: 3px;
+        }
+        .about-button {
+            display: block;
+            width: 150px;
+            background-color: rgba(186, 186, 186, 0.4);
+            border-radius: 5px;
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 30px;
+            padding-left: 30px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+        /*Waiting*/
+        .waiting-background {
+            margin: 0 auto;
+            background-image: url(https://i.imgur.com/FK82wVs.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+        }
+        .waiting-header {
+            padding-top: 260px;
+            margin: 0 auto;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            font-weight: 900;
+            text-shadow: 0px 0px 15px #000;
+            width: 200px;
+            align-items: center;
+            vertical-align: middle;
+        }
+        .waiting-paragraph {
+            padding: 0;
+            margin: 0 auto;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            font-weight: 900;
+            text-shadow: 0px 0px 15px #000;
+            width: 200px;
+            align-items: center;
+            vertical-align: central;
+        }
+        /*Places*/
+        .places-content {
+            background-color: black;
+            background-size: 100%;
+            height: 825px;
+        }
+        .places-img {
+            width: 450px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+        .places-heading {
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .places-name {
+            text-align: center;
+            padding-top: 50px;
+            width: 50%;
+            float:left
+        }
+        .places-location {
+            padding-top: 50px;
+            width: 50%;
+            float: left;
+        }
+        h3 {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+        }
+        .name {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+        }
+        .location {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+        }
+        /*More*/
+        .more-content {
+            background-color: white;
+            background-size: 100%;
+            height: 250px;
+        }
+        .more-heading {
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: 'Quicksand', sans-serif;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .more-paragraph {
+            margin: 0 auto;
+            padding-bottom: 50px;
+            font-family: 'Quicksand', sans-serif;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .more-button {
+            display: block;
+            width: 150px;
+            background-color: rgba(186, 186, 186, 0.4);
+            border-radius: 5px;
+            color: black;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 30px;
+            padding-left: 30px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        /*Footer*/
+        footer {
+            width: 100%;
+            height: 100px;
+        }
+        .footer-paragraph {
+            padding-top: 20px;
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+        <!--Header-->
+        <header>
+            <div class="header-content" id="home">
+                <h1>Welcome to London</h1>
+                <q>London is a modern Babylon</q>
+            </div>
+        </header>
+        <!--Fixed Navigation-->
+        <div class="navbar">
+            <a href="">Home</a>
+            <a href="#about">About</a>
+            <a href="#places">Places</a>
+            <a href="#more">More</a>
+        </div>
+        <!--About Section-->
+        <div class="about-content" id="about">
+            <h2 class="about-heading">About London</h2>
+            <img src="https://i.imgur.com/GJ96zW7.jpg" alt="Shard image" class="about-image" />
+            <p class="about-paragraph"><b>London</b> is the capital and most populous city of England and the United Kingdom. Standing on the River Thames in the south east of the island of Great Britain, 
+            London has been a major settlement for two millennia. It was founded by the Romans, who named it Londinium. London's ancient core, the City of London, 
+            largely retains its 1.12-square-mile medieval boundaries. Since at least the 19th century, "London" has also referred to the metropolis around this core, 
+            historically split between Middlesex, Essex, Surrey, Kent and Hertfordshire, which today largely makes up Greater London,
+            a region governed by the Mayor of London and the London Assembly.</p>
+            <a href="#places" class="about-button">Places to visit</a>
+        </div>
+        <!--Waiting Section-->
+        <div class="waiting-background">
+            <h2 class="waiting-header">London is Waiting</h2>
+            <p class="waiting-paragraph">For you...</p>
+        </div>
+        <!--Places-->
+        <div class="places-content" id="places">
+            <h2 class="places-heading">Places to Visit</h2>
+            <img src="https://i.imgur.com/8ncm7jb.jpg" class="places-img"/>
+            <div class="places-name">
+                <h3>Places</h3>
+                <p class="name">British Museum</p>
+                <p class="name">London Eye</p>
+                <p class="name">Big Ben</p>
+            </div>
+            <div class="places-location">
+                <h3>Location</h3>
+                <p class="location">Great Russell St, Bloomsbury</p>
+                <p class="location">Lambeth</p>
+                <p class="location">Westminster</p>
+            </div>
+        </div>
+        <!--More-->
+        <div class="more-content" id="more">
+            <h2 class="more-heading">Find out more about London</h2>
+            <p class="more-paragraph">By pressing this button bellow!</p>
+            <a href="https://www.timeout.com/london" class="more-button">CLICK ME!</a>
+        </div>
+    <!--Footer-->
+    <footer>
+        <p class="footer-paragraph">Made & Styled by Mantautas Piktuizis</p>
+    </footer>
+</body>
+</html>
