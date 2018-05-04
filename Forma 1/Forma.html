@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Form ND.5</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        .containter {
+            background-color: lightgray;
+            height: 350px;
+            width: 900px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .info {
+            width: 400px;
+            float: left;
+            padding-left: 50px;
+        }
+        .text {
+            width: 400px;
+            float: right;
+            padding-right: 50px;
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            color: darkgray;
+            text-shadow: 5px 10px 5px 10px black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #fname {
+            width: 360px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        #email {
+            width: 360px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        #subject {
+            width: 360px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        #message {
+            width: 396px;
+            height: 110px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            resize: none;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+        input[type=submit] {
+            width: 800px;
+            height: 40px;
+            color: white;
+            border: none;
+            background-color: #FB4821;
+            border-radius: 5px;
+            margin-top: 25px;
+            margin-left: 55px;
+        }
+        input[type=submit]:hover {
+            background-color: #E93B15;
+        }
+    </style>
+</head>
+<body>
+    <div class="containter">
+        <h2>Elegant Contact Form</h2>
+        <form>
+            <div class="info">
+                <input type="text" id="fname" name="firstname" placeholder="Name" />
+                <input type="text" id="email" name="emailadress" placeholder="Email" />
+                <input type="text" id="subject" name="subject" placeholder="Subject" />
+            </div>
+            <div class="text">
+                <textarea type="text" id="message" name="messagetext" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>
