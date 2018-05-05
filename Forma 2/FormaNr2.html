@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Forma nr2</title>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            height: 350px;
+            width: 600px;
+            background-color: lightgray;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-left: 50px;
+        }
+        .search {
+            width: 600px;
+            height: 60px;
+            background-color: lightgray;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-left: 50px;
+        }
+        #submit-button {
+            color: white;
+            background-color: gray;
+            margin-top: 30px;
+            margin-left: 100px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        #search-button {
+            cursor: pointer;
+        }
+        .text {
+            text-align: right;
+        }
+        .search-text {
+            padding-left: 85px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td class="text">Title</td>
+                        <td><input type="text" id="title" placeholder="Enter your title" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Name</td>
+                        <td><input type="text" id="fullname" placeholder="John Johnson" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Phone number</td>
+                        <td><input type="tel" id="number" placeholder="+370 60000123" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Email address</td>
+                        <td><input type="email" id="email" placeholder="name@email.com" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Your website</td>
+                        <td><input type="url" id="website" placeholder="www.yoursite.com" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Nr. of items to order</td>
+                        <td><input type="number" min="0" max="10" id="nr-items" placeholder="0" style="width: 30px;" />(1-10)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Length</td>
+                        <td><input type="range" min="1" max="10" step="0.1" value="5" id="slider" /><span id="value"></span>m (in 10cm increments)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Delivery date</td>
+                        <td><input type="date" id="date" />(Minimum 04 June 2018)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Time of delivery</td>
+                        <td><input type="time" id="time" />(in 10min increments)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Color of the item</td>
+                        <td><input type="color" id="color" />(Default black)</td>
+                    </tr>
+                </table>
+                <input type="button" id="submit-button" value="Submit" />
+            </div>
+            <div class="search">
+                <table>
+                    <tr>
+                        <td class="search-text">Search</td>
+                        <td><input type="search" id="search" /></td>
+                        <td><input type="button" id="search-button" value="Go" /></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <script>
+        var slider = document.getElementById("slider");
+        var output = document.getElementById("value");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>
+</body>
+</html>
