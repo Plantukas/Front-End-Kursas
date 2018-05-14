@@ -1,0 +1,523 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google font link-->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    
+    <title>Chicago Pizzeria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0 auto;
+            height: auto;
+            width: 100% !important;
+            background-color: black;
+            overflow-x: hidden;
+        }
+        /*Header*/
+        header {
+            background-size: cover;
+            background-image: url("https://www.w3schools.com/w3images/pizza.jpg");
+            background-repeat: no-repeat;
+            height: 650px;
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+        }
+        .header-middle {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h1 {
+            font-family: 'Amatic SC', sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 80px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 20px;
+        }
+        .header-btn {
+            border-style: none;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 25px;
+            width: 170px;
+            height: 50px;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 10px;
+        }
+        .header-btn:hover {
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+        }
+        .header-bottom {
+            background-color: black;
+            width: 150px;
+            position: relative;
+            top: 320px;
+            left: 20px;
+        }
+        .header-bottom p {
+            color: white;
+            text-align: center;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 20px;
+        }
+        /*Navigation*/
+        .navbar {
+            position: fixed;
+            width: 100%;
+            height: auto;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 20px;
+            height: auto;
+            float: left;
+            padding: 8px 16px;
+            width: auto;
+            border: none;
+            display: block;
+            outline: 0;
+        }
+        .navbar:hover {
+            background-color: black;
+        }
+        a:hover {
+            background-color: gray;
+            color: black;
+        }
+        /*Menu Section*/
+        .menu {
+            background-color: black;
+            height: 1270px;
+        }
+        .menu-content {
+            width: 900px;
+            height: auto;
+            margin: auto;
+        }
+        .menu-heading {
+            color: white;
+            margin: 0 auto;
+            font-family: 'Amatic SC', sans-serif;
+            text-align: center;
+            font-size: 60px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            
+        }
+        .menu-items {
+            vertical-align: middle;
+            text-align: center;
+            width: 900px;
+            height: 55px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style: none;
+            float: left;
+            display: inline-block;
+            width: 900px;
+            height: 55px;
+            text-align: center;
+            padding-left: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        li {
+            float: left;
+            width: 300px;
+            height: 55px;
+        }
+        .menu-item {
+            text-decoration: none;
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 30px;
+        }
+        .menu-item p {
+            margin: 0 auto;
+            padding: 8px;
+        }
+        .menu-item:hover {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        .selected-item {
+            background-color: red;
+
+        }
+        .selected-item:hover {
+            color: white;
+            cursor: pointer;
+        }
+        .menu-listings {
+            overflow: visible;
+            width: 900px;
+            background-color: white;
+            padding-left: 15px;
+            padding-top: 30px;
+            padding-right: 15px;
+            padding-bottom: 30px;
+        }
+        .menu-listings h2 {
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 30px;
+            margin: 0 auto;
+            
+        }
+        .menu-listings p {
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 28px;
+            color: gray;
+        }
+        .menu-listings hr {
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: lightgray;
+            margin-bottom: 20px;
+        }
+        .price {
+            justify-content: space-between;
+            float: right;
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        .type-hot {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            margin-left: 10px;
+        }
+        .type-new {
+            background-color: gray;
+            color: black;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            margin-left: 10px;
+        }
+        /*About*/
+        .about {
+            background-color: #4C191B;
+            height: 1450px;
+        }
+        .about-content {
+            margin: 0 auto;
+            width: 900px;
+        }
+        .about-content h2 {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .about-content p {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 22px;
+            text-align: left;
+            margin: 0;
+            padding-top: 30px;  
+        }
+        .about-content h3 {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 40px;
+            text-align: left;
+            margin: 0;
+            padding-top: 30px;
+        }
+        .chef-image {
+            width: 150px;
+            justify-content: space-between;
+            float: right;
+            border-radius: 50%;
+        }
+        .interior-img {
+            padding-top: 50px;
+            width: 900px;
+        }
+        .opening-one {
+            width: 450px;
+            float: left;
+            margin: 0;
+        }
+        .opening-two {
+            width: 450px;
+            float: left;
+            margin: 0;
+        }
+        /*Contact*/
+        .contact {
+            margin: 0;
+            background-color: gray;
+        }
+        .contact-content {
+            width: 900px;
+            margin: 0 auto;
+        }
+        .contact-content h2 {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .contact-content p {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 22px;
+            text-align: left;
+            margin: 0;
+            padding-top: 30px;  
+        }
+        .type-fyi {
+            background-color: black;
+            color: white;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+        form input {
+            width: 900px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 22px;
+        }
+        #submit {
+            width: 900px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 25px;
+            margin-bottom: 70px;
+        }
+        #submit:hover {
+            background-color: darkgray;
+            color: white;
+            cursor: pointer;
+        }
+        iframe {
+            margin-bottom: -5px;
+        }
+        /*Footer*/
+        footer {
+            color: white;
+            font-family: 'Amatic SC', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-device-width:768px) {
+            body {
+                min-width: 768px;
+            }
+           
+            header, .menu, .menu-content, .navbar {
+                width: 768px;
+            }
+            .navbar a {
+                font-size: 40px;
+                width: 25%;
+                text-align: center;
+            }
+            .menu-listings {
+                width: 720px;
+                margin: 0 auto;
+            }
+            .menu-items {
+                width: 720px;
+            }
+            .menu-item {
+                width: 240px;
+            }
+            .about {
+                height: 1200px;
+            }
+            .about-content {
+                width: 768px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            .about-content h3 {
+                margin: 0 auto;
+                width: 170px
+            }
+            .interior-img {
+                width: 600px;
+                margin-left: 59px
+            }
+            .opening-one {
+                width: 359px;
+            }
+            .opening-two {
+                width: 359px;
+                float: right;
+            }
+            .opening-one p {
+                text-align: center;
+            }
+            .opening-two p {
+                text-align: center;
+            }
+            .contact-content {
+                width: 768px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            form input {
+                width: 675px;
+            }
+            #submit {
+                width: 675px;
+            }
+            footer {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="header-middle" id="home">
+            <h1>Thin<br />Crust Pizza</h1>
+            <!--
+            <button class="header-btn">LET ME SEE THE MENU</button>
+                -->
+            <a href="#menu" class="header-btn">LET ME SEE THE MENU</a>
+        </div>
+        <div class="header-bottom">
+            <p>Open from 10AM to 12PM</p>
+        </div>
+    </header>
+    <!--Navbar-->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!--Menu-->
+    <div class="menu" id="menu">
+        <div class="menu-content">
+            <h2 class="menu-heading">The Menu</h2>
+            <div class="menu-items">
+                <ul>
+                    <li class="menu-item selected-item" id=""><p>Pizza</p></li>
+                    <li class="menu-item"><p>Salads</p></li>
+                    <li class="menu-item"><p>Starter</p></li>
+                </ul>
+            </div>
+            <div class="menu-listings">
+                <h2>Margherita<span class="price">$12.50</span></h2>
+                <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+                <hr />
+                <h2>Formaggio<span class="price">$15.50</span></h2>
+                <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+                <hr />
+                <h2>Chicken<span class="price">$17.00</span></h2>
+                <p>Fresh tomatoes, mozzarella, chicken, onions</p>
+                <hr />
+                <h2>Pineapple'o'clock<span class="price">$16.50</span></h2>
+                <p>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+                <hr />
+                <h2>Meat Town<span class="type-hot">Hot!</span><span class="price">$20.00</span></h2>
+                <p>Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+                <hr />
+                <h2>Parma<span class="type-new">New</span><span class="price">$21.50</span></h2>
+                <p>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div class="about" id="about">
+        <div class="about-content">
+            <h2>About</h2>
+            <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.</p>
+            <p><strong>The Chef?</strong> Mr. Italiano himself <img src="https://www.w3schools.com/w3images/chef.jpg" class="chef-image" alt="chef image"/></p>
+            <p>We are proud of our interiors.</p>
+            <img src="https://www.w3schools.com/w3images/onepage_restaurant.jpg" class="interior-img" alt="restaurant interior"/>
+            <h3>Opening Hours</h3>
+            <div class="opening-one">
+                <p>Mon & Tue CLOSED</p>
+                <p>Wednesday 10.00 - 24.00</p>
+                <p>Thursday 10:00 - 24:00</p>
+            </div>
+            <div class="opening-two">
+                <p>Friday 10:00 - 12:00</p>
+                <p>Saturday 10:00 - 23:00</p>
+                <p>Sunday Closed</p>
+            </div>
+        </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184709.67775190875!2d-87.66558463439051!3d41.87871512996751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2s%C4%8Cikaga%2C+Ilinojus%2C+Jungtin%C4%97s+Valstijos!5e0!3m2!1slt!2slt!4v1526030358074" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <!--Contact-->
+    <div class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <p>Find us at some address at some place or call us at 05050515-122330</p>
+            <p><span class="type-fyi">FYI!</span> We offer full-service catering for any event, large or small.
+            We understand your needs and we will cater the food to satisfy
+            the biggerst criteria of them all, both look and taste.</p>
+            <p style="font-size: 30px;padding-bottom: 20px;"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" alt="Please fill out this field."/>
+                <input type="text" placeholder="How Many People" alt="Please fill out this field."/>
+                <input id="datetime" type="datetime-local" value="2018-05-10T12:30" alt="Please fill out this field."/>
+                <input type="text" placeholder="Message \ Special Requirements" alt="Please fill out this field." />
+                <button id="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer><p>Made By Mantautas Piktuizis</p></footer>
+</body>
+</html>
