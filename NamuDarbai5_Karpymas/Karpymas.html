@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>NobodysFool</title>
+    <style>
+        /*CSS Grid-View*/
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        /*CSS Grid-View end*/
+
+        * {
+            box-sizing: border-box;
+            font-family: Georgia;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+            background-color: #282828;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        /*Fixed Navigation*/
+        .fixed-nav {
+            position: fixed;
+            background-color: black;
+            margin: 0;
+            height: 60px;
+            position: relative;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-left {
+            float: left;
+            padding-top: 25px;
+            padding-left: 20px;
+            font-size: 12px;
+        }
+        .nav-right {
+            float: right;
+            padding-top: 10px;
+            padding-right: 20px;
+        }
+        li {
+            float: left;
+            color: gray;
+            margin-right: 10px;
+        }
+        .nav-right li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            background-color: gray;
+            border-radius: 50px;
+            width: 35px;
+            height: 35px;
+        }
+        .nav-one, .nav-two, .nav-three {
+            border-right-style: solid;
+            padding-right: 10px;
+            border-right-width: 1px;
+        }
+        .nav-one, .nav-two, .nav-three, .nav-four:hover {
+            cursor: pointer;
+        }
+        .in-logo:hover {
+            background-color: blue;
+        }
+        .twitter-logo:hover {
+            background-color: deepskyblue;
+        }
+        .pint-logo:hover {
+            background-color: darkred;
+        }
+        .google-logo:hover {
+            background-color: red;
+        }
+        .rss-logo:hover {
+            background-color: orangered;
+        }
+        /*Top Navigation*/
+        .top-nav {
+            height: 80px;
+            position: relative;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: white;
+        }
+        .navbar {
+            height: 80px;
+            border-bottom-style: solid;
+            border-bottom-color: gray;
+            border-bottom-width: 5px;
+            overflow: visible;
+        }
+        .navbar li {
+            color: black;
+            font-size: 12px;
+            padding-top: 40px;
+            padding-bottom: 21px;
+            margin-right: 20px;
+        }
+        .navbar li:hover {
+            color: gray;
+            border-bottom-style: solid;
+            border-bottom-color: dodgerblue;
+            border-bottom-width: 5px;
+            cursor: pointer;
+        }
+        /*Header*/
+        .header {
+            position: relative;
+            padding-right: 20px;
+            padding-left: 20px;
+            height: 140px;
+            float: left;
+            background-color: white;
+        }
+        h1 {
+            margin-bottom: 0px;
+            margin-top: 35px;
+        }
+        .description {
+            font-size: 12px;
+            color: gray;
+        }
+        /*Search Bar*/
+        form {
+            float: right;
+        }
+        .search-bar {
+            position: relative;
+            float: right;
+            height: 140px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: white;
+        }
+        #search {
+            margin-top: 65px;
+            border-style: none;
+            background-color: #EEEEEE;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        .search-btn {
+            background-color: dodgerblue;
+            border-radius: 5px;
+            border-style: none;
+            color: white;
+            height: 29px;
+            width: 72px;
+        }
+        .search-btn:hover {
+            cursor: pointer;
+        }
+        /*Article, Image slider*/
+        .content {
+            float: left;
+            position: relative;
+            background-color: #EEEEEE;
+            border-top-color: lightgray;
+            border-top-style: solid;
+            border-top-width: 10px;
+            border-bottom-color: lightgray;
+            border-bottom-style: solid;
+            border-bottom-width: 10px;
+            height: 465px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .article-heading {
+            margin-top: 155px;
+            font-size: 31px;
+        }
+        .article-text {
+            font-size: 18px;
+            color: gray;
+            width: 360px;
+            padding-bottom: 20px;
+        }
+        .read-btn {
+            background-color: dodgerblue;
+            border-radius: 5px;
+            border-style: none;
+            color: white;
+            padding: 10px 10px 10px 10px;
+        }
+        .read-btn:hover {
+            cursor: pointer;
+        }
+        .article {
+            float: left;
+        }
+        .img-slider {
+            float: right;
+            background-color: darkgray;
+            height: 440px;
+            width: 550px;
+            margin-top: 5px;
+        }
+        .first-slider-change {
+            margin-left: 22px;
+        } 
+        .slider-change {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            border-color: black;
+            border-radius: 20px;
+            margin-top: 410px;
+        }
+        .slider-change:hover {
+            background-color: darkgray;
+            border-color: black;
+            border-style: solid;
+        }
+        /*Responsive Content*/
+        .img-holder {
+            float: left;
+            padding-top: 40px;
+            padding-left: 20px;
+            height: 540px;
+            width: 500px;
+            background-color: white;
+        }
+        .responsive-img {
+            width: 480px;
+            height: 500px;
+        }
+        .responsive-content {
+            float: right;
+            height: 540px;
+            background-color: white;
+        }
+        .content-part {
+            height: 275px;
+            width: 50%;
+            float: left;
+            padding-top: 40px
+        }
+        .content-part h4 {
+            font-size: 14px;
+            text-align: center;
+            color: dodgerblue;
+        }
+        .content-part p {
+            font-size: 12px;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .small-img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            height: 80px;
+            width: 85px;
+        }
+        /*Contact Us Today*/
+        .contact {
+            float: left;
+            position: relative;
+            height: 200px;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: white;
+        }
+        .contact-box {
+            height: 120px;
+            background-color: #e0e0e0;
+            border-left-style: solid;
+            border-left-color: dodgerblue;
+            border-left-width: 10px;
+        }
+        .contact-box h2 {
+            font-size: 28px;
+            margin: 0;
+            padding-left: 50px;
+            padding-top: 30px;
+        }
+        .contact-box p {
+            font-size: 16px;
+            margin: 0;
+            padding-left: 50px;
+            display: inline-block;
+            padding-top: 10px;
+        }
+        .contact-btn {
+            position: relative;
+            background-color: dodgerblue;
+            font-size: 23px;
+            border-radius: 5px;
+            border-style: none;
+            color: lightgray;
+            height: 60px;
+            width: 270px;
+            right: 80px;
+            bottom: 30px;
+            float: right;
+            padding: 0;
+        }
+        .contact-btn:hover {
+            cursor: pointer;
+        }
+        /*About Us*/
+        .about-section {
+            position: relative;
+            float: left;
+            background-color: #1a1a1a;
+        }
+        .about-us, .quick-links, .blog-posts, .contact-us {
+            color: white;
+            text-align: left;
+            float: left;
+            padding: 20px 20px;
+        }
+        .about-us p {
+            margin-top: 20px;
+            font-size: 19px;
+        }
+        .about-img {
+            width: 215px;
+            height: 90px;
+        }
+        .read-more {
+            float: right;
+            text-decoration: none;
+            color: dodgerblue;
+        }
+        .link-list {
+            width: 240px;
+            font-size: 14px;
+        }
+        .link-list li {
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+            padding-top: 10px;
+            float: none;
+        }
+        .link-list li a {
+            text-decoration: none;
+            color: dodgerblue;
+        }
+        .blog-posts h5, p {
+            margin: 0px 0px;
+            color: gray;
+        }
+        .contact-us {
+            padding-left: 0px;
+        }
+        input {
+            width: 225px;
+            padding: 10px 0 10px 10px;
+            margin-bottom: 15px;
+            background-color: #232323;
+            border-style: none;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: none;
+            width: 225px;
+            height: 105px;
+            padding: 10px 0px 0px 10px;
+            background-color: #232323;
+            border-style: none;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 75px;
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 10px 10px 10px;
+            margin-top: 10px;
+        }
+        /*Footer*/
+        footer {
+            background-color: #222222;
+            position: relative;
+            float: left;
+            width: 100%;
+        }
+        .copyright {
+            float: left;
+            padding: 30px 20px 30px 20px;
+        }
+        .template-by {
+            float: right;
+            padding: 30px 20px 30px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-12 fixed-nav">
+            <ul class="nav-left">
+                <li class="nav-one">Sign Up</li>
+                <li class="nav-two">Login</li>
+                <li class="nav-three">RSS Feeds</li>
+                <li class="nav-four">Archived News</li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="https://www.linkedin.com/uas/login" class="in-logo"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en" class="twitter-logo"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.pinterest.com/" class="pint-logo"><i class="fab fa-pinterest"></i></a></li>
+                <li><a href="https://plus.google.com/discover" class="google-logo"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://en.wikipedia.org/wiki/RSS" class="rss-logo"><i class="fas fa-rss"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-12 top-nav">
+            <ul class="navbar">
+                <li>HOMEPAGE</li>
+                <li>STYLE DEMO</li>
+                <li>FULL WIDTH</li>
+                <li>DROPDOWN</li>
+                <li>GALLERY</li>
+                <li>PORTFOLIO</li>
+                <li>LINK TEXT</li>
+                <li>LONG LINK TEXT</li>
+            </ul>
+        </div>
+        <div class="col-6 header">
+            <h1>NobodysFool</h1>
+            <p class="description">Free PSD Website Template</p>
+        </div>
+        <div class="col-6 search-bar">
+            <form>
+                <input type="search" placeholder="Search Our Website.." id="search" />
+                <button class="search-btn">SEARCH</button>
+            </form>
+        </div>
+        <div class="col-12 content">
+            <div class="col-5 article">
+                <h2 class="article-heading">Your title can be long and descriptive</h2>
+                <p class="article-text">Cursuspenatisaccum ut curabitur nulla tellus tor ames a in curabitur pede. Idet mollisi eros dis orci congue elis et curabitur.</p>
+                <button class="read-btn">READ MORE &#187 </button>
+            </div>
+            <div class="col-7 img-slider">
+                <a href="#slider-image-1" class="slider-change first-slider-change"></a>
+                <a href="#slider-image-2" class="slider-change"></a>
+                <a href="#slider-image-3" class="slider-change"></a>
+                <a href="#slider-image-4" class="slider-change"></a>
+                <a href="#slider-image-5" class="slider-change"></a>
+            </div>
+        </div>
+        <div class="col-6 img-holder">
+            <img src="https://i.imgur.com/MfSo1ZT.jpg" class="responsive-img" alt="Responsive design image" />
+        </div>
+        <div class="col-6 responsive-content">
+            <div class="col-3 content-part">
+                <img src="https://78.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.png" class="small-img" alt="small image" />
+                <h4>Vivamuslibero Augue</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-3 content-part">
+                <img src="https://78.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.png" class="small-img" alt="small image" />
+                <h4>Vivamuslibero Augue</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-3 content-part">
+                <img src="https://78.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.png" class="small-img" alt="small image" />
+                <h4>Vivamuslibero Augue</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+            <div class="col-3 content-part">
+                <img src="https://78.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.png" class="small-img" alt="small image" />
+                <h4>Vivamuslibero Augue</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
+            </div>
+        </div>
+        <div class="col-12 contact">
+            <div class="col-12 contact-box">
+                <h2>Lorem ipsum dolor sit amet elit !</h2>
+                <p>Why not try our services today, you won’t regret your choice !</p>
+                <input type="button" class="contact-btn" value="CONTACT US TODAY" />
+            </div>
+        </div>
+        <div class="col-12 about-section">
+            <div class="col-3 about-us">
+                <h4>ABOUT US</h4>
+                <img src="https://78.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.png" class="about-img" alt="about image" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque. Quisque non luctus sem. Nullam non magna vel nisi posuere bibendum vitae sed dui.</p>
+                <a href="" class="read-more">Read More &#187</a>
+            </div>
+            <div class="col-3 quick-links">
+                <h4>QUICK LINKS</h4>
+                <ul class="link-list">
+                    <li>&#187 <a href="">Lorem ipsum dolor sit</a></li>
+                    <li>&#187 <a href="">Amet consectetur</a></li>
+                    <li>&#187 <a href="">Praesent vel sem id</a></li>
+                    <li>&#187 <a href="">Curabitur hendrerit est</a></li>
+                    <li>&#187 <a href="">Aliquam eget erat nec sapien</a></li>
+                    <li>&#187 <a href="">Cras id augue nunc</a></li>
+                    <li>&#187 <a href="">Cras id augue nunc</a></li>
+                    <li>&#187 <a href="">In nec justo non</a></li>
+                    <li>&#187 <a href="">Vivamus mollis enim ut</a></li>
+                    <li>&#187 <a href="">Curabitur hendrerit est</a></li>
+                    <li style="border: none;">&#187 <a href="">Sed a nulla urna</a></li>
+                </ul>
+            </div>
+            <div class="col-3 blog-posts">
+                <h4>LATEST BLOG POSTS</h4>
+                <h5>Post Title</h5>
+                <p style="font-size: 15px;">Admin, domainname.com Friday, 6th April 2000</p>
+                <p style="padding-top: 20px;">Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+                <a href="" class="read-more">Read More &#187</a>
+                <br />
+                <h5 style="padding-top: 20px;">Post Title</h5>
+                <p style="font-size: 15px;">Admin, domainname.com Friday, 6th April 2000</p>
+                <p style="padding-top: 20px;">Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+                <a href="" class="read-more">Read More &#187</a>
+            </div>
+            <div class="col-3 contact-us">
+                <h4>CONTACT US</h4>
+                <form>
+                    <input type="text" placeholder="Name" required/>
+                    <input type="email" placeholder="Email" required />
+                    <input type="text" placeholder="Subject" required />
+                    <textarea placeholder="Message" required></textarea>
+                    <input type="submit" placeholder="SUBMIT" class="submit-btn" />
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p class="copyright">Copyright © 2013 Domain Name - All Rights Reserved</p>
+            <p class="template-by">Template by OS Templates</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -27,18 +27,21 @@
         text-decoration: none;
         color: blue;
     }
+    nav {
+        float: left;
+        height: 100%;
+        width: 30%;
+        border-style: solid;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 0px;
+    }
     ul  {
         padding-top: 20px;
         margin-top: 0px;
         margin-bottom: 0px;
         float: left;
         list-style: none;
-        width: 200px;
-        height: 423px;
-        border-style: solid;
-        border-top: 0px;
-        border-bottom: 0px;
-        border-left: 0px;
     }
     h1 {
         margin-bottom: 0px;
@@ -80,16 +83,22 @@
             <h1>City Gallery</h1>
         </div>
         <div class="list-content">
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/London" class="link">London</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Tokyo" class="link">Tokyo</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/New_York_City" class="link">New York</a></li>    
-            </ul>
-            <h2><bold>About London</bold></h2>
-            <p class="text">London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.
-                At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey,
-                site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views
-                of the South Bank cultural complex, and the entire city.</p>
+            <nav>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/London" class="link">London</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Tokyo" class="link">Tokyo</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/New_York_City" class="link">New York</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2><bold>About London</bold></h2>
+                <p class="text">
+                    London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.
+                    At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey,
+                    site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views
+                    of the South Bank cultural complex, and the entire city.
+                </p>
+            </article>
         </div>
     </div>
     <footer><p class="p-footer"><i>Copyright &copy; W3schools.com</i></p></footer>
