@@ -6277,49 +6277,26 @@ body, html {
   width: 100%;
   margin: 0; }
 
-/* Nav Bar */
-#navbar {
-  padding-left: 245px;
-  padding-right: 245px;
+header {
   background-color: #333333; }
-  #navbar div:nth-child(1) {
-    padding-top: 10px; }
-    #navbar div:nth-child(1) h1 {
-      font-size: 30px;
-      margin: 0;
+  header .container .row {
+    margin: 0 auto; }
+    header .container .row div:nth-child(1) h1 {
       color: lightgray; }
-    #navbar div:nth-child(1) p {
-      font-size: 10px;
+    header .container .row div:nth-child(1) p {
       color: lightgray; }
-  #navbar div:nth-child(2) {
-    padding: 0px; }
-    #navbar div:nth-child(2) ul {
-      float: right;
-      list-style-type: none;
-      padding-left: 0px;
-      background-color: #242220;
-      margin: 0;
-      padding: 10px 5px 10px 5px;
-      font-size: 14px; }
-      #navbar div:nth-child(2) ul li {
-        float: right;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: lightgray; }
-        #navbar div:nth-child(2) ul li a {
+    header .container .row div:nth-child(2) {
+      padding: 0; }
+      header .container .row div:nth-child(2) nav {
+        background-color: #464445; }
+        header .container .row div:nth-child(2) nav ul .nav-link {
+          font-size: 14px;
           text-decoration: none;
           color: lightgray; }
 
 /* 1st Row */
-.container .row:nth-child(1) {
-  padding-left: 80px;
-  padding-right: 80px; }
-  .container .row:nth-child(1) .article-container {
-    padding-bottom: 25px; }
-
 #article {
-  float: left;
-  padding: 0 10px 0 10px; }
+  float: left; }
   #article img {
     float: left;
     padding-bottom: 10px; }
@@ -6339,79 +6316,68 @@ body, html {
     float: right;
     color: orange; }
 
-.container .row:nth-child(2) {
-  padding-left: 80px;
-  padding-right: 80px; }
-  .container .row:nth-child(2) #img-bar {
-    padding: 30px 0px 30px 0px;
-    border-bottom: solid lightgray 1px;
-    border-top: solid lightgray 1px; }
-    .container .row:nth-child(2) #img-bar div:nth-child(3) img {
+.container .row:nth-child(2) #img-bar {
+  padding: 30px 0px 30px 0px;
+  border-bottom: solid lightgray 1px;
+  border-top: solid lightgray 1px; }
+  .container .row:nth-child(2) #img-bar img {
+    width: 100%; }
+    .container .row:nth-child(2) #img-bar img div:nth-child(3) img {
       margin-bottom: 30px; }
 
 /* 2nd Row */
 .view-more {
-  padding-left: 80px;
-  color: orange;
-  font-size: 13px; }
+  color: orange; }
   .view-more:visited {
     color: orange; }
 
-.container .row:nth-child(3) {
-  padding: 0 80px 10px 80px; }
-
 /* 3rd Row */
-#categories {
-  padding-top: 25px;
-  padding-left: 15px; }
-  #categories .row {
-    padding-left: 0px;
-    padding-right: 0px; }
-  #categories #readCategories {
-    padding-bottom: 30px; }
-    #categories #readCategories h3 {
-      font-size: 15px;
-      color: #6C6869;
-      display: inline;
-      padding-left: 20px; }
-    #categories #readCategories p {
-      font-size: 12px;
-      color: #6C6869;
-      display: table-cell;
-      padding: 10px 0 0 20px; }
-    #categories #readCategories span {
-      color: orange; }
-    #categories #readCategories a {
-      float: right;
-      color: orange;
-      font-size: 14px;
-      padding-top: 35px; }
-
-#categoriesList {
-  padding-top: 25px;
+#categories .row {
+  padding-left: 0px;
   padding-right: 0px; }
-  #categoriesList div:nth-child(1) {
-    padding-right: 0px; }
-    #categoriesList div:nth-child(1) h3 {
-      font-size: 15px;
-      color: #6C6869;
-      padding-bottom: 20px;
-      border-bottom: solid lightgray 1px; }
-    #categoriesList div:nth-child(1) ul {
-      list-style: none;
-      padding-left: 0px; }
-      #categoriesList div:nth-child(1) ul li {
-        font-size: 13px;
-        border-bottom: dotted gray 2px;
-        padding: 5px 0 5px 5px; }
-        #categoriesList div:nth-child(1) ul li img {
-          padding-right: 5px; }
+
+#categories #readCategories {
+  padding-bottom: 30px; }
+  #categories #readCategories img {
+    float: left; }
+  #categories #readCategories h3 {
+    font-size: 15px;
+    color: #6C6869;
+    display: inline;
+    padding-left: 20px; }
+  #categories #readCategories p {
+    font-size: 12px;
+    color: #6C6869;
+    display: table-cell;
+    padding: 10px 0 0 20px; }
+  #categories #readCategories span {
+    color: orange; }
+  #categories #readCategories a {
+    float: right;
+    color: orange;
+    font-size: 14px;
+    padding-top: 35px; }
+
+#categoriesList div:nth-child(1) {
+  padding-right: 0px; }
+  #categoriesList div:nth-child(1) h3 {
+    font-size: 15px;
+    color: #6C6869;
+    padding-bottom: 20px;
+    border-bottom: solid lightgray 1px; }
+  #categoriesList div:nth-child(1) ul {
+    list-style: none;
+    padding-left: 0px; }
+    #categoriesList div:nth-child(1) ul li {
+      font-size: 13px;
+      border-bottom: dotted gray 2px;
+      padding: 5px 0 5px 5px; }
+      #categoriesList div:nth-child(1) ul li img {
+        padding-right: 5px; }
 
 /* Footer */
 footer {
-  display: flex;
-  background-color: #333333;
-  padding: 0 220px 0 220px; }
+  background-color: #333333; }
   footer .float-left p {
     font-size: 13px;
     padding-top: 15px;
@@ -6424,44 +6390,63 @@ footer {
     float: right; }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  #navbar {
-    padding-left: 50px;
-    padding-right: 50px; }
-    #navbar div:nth-child(2) ul {
-      font-size: 13px; }
-  .row:nth-child(2) #img-bar div:nth-child(3) a {
-    padding-left: 20px; }
-  footer {
-    padding-left: 100px;
-    padding-right: 100px; }
-  #article h3 {
-    font-size: 12px; } }
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  header .container .row div:nth-child(2) .navbar .nav li .nav-link {
+    font-size: 10px; } }
 
-@media (max-width: 769px) {
-  #navbar div:nth-child(1) h1 {
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  header .container .row div:nth-child(1) {
     text-align: center; }
-  #navbar div:nth-child(1) p {
+  header .container .row h1 {
+    font-size: 50px; }
+  header .container .row p {
+    font-size: 20px; }
+  header .container .row ul {
+    margin: 0 auto; }
+  header .container .row div:nth-child(2) {
+    margin-bottom: 20px; }
+  header .container .row div:nth-child(2) nav ul .nav-link {
+    font-size: 17px; }
+  .container .row:nth-child(2) #img-bar .float-left img {
+    width: 70%;
+    margin-bottom: 20px; }
+  .container .row:nth-child(1) .article-container #article p {
+    font-size: 13px; }
+  .container .row:nth-child(1) .article-container #article a {
+    font-size: 14px; }
+  .container .row:nth-child(2) #img-bar div:nth-child(3) .view-more small {
+    font-size: 15px; }
+  .container .row:nth-child(3) #categories .row #readCategories h3 {
+    font-size: 20px; }
+  .container .row:nth-child(3) #categories .row #readCategories p {
+    font-size: 14px; }
+  .container .row:nth-child(3) #categoriesList {
+    margin-bottom: 24px; }
+    .container .row:nth-child(3) #categoriesList div h3 {
+      font-size: 20px; }
+    .container .row:nth-child(3) #categoriesList div ul li {
+      font-size: 15px; } }
+
+@media screen and (max-width: 460px) and (min-width: 320px) {
+  header .container .row div:nth-child(1) {
     text-align: center; }
-  #navbar div:nth-child(2) {
-    padding-right: 154px;
-    padding-bottom: 10px; }
-    #navbar div:nth-child(2) ul {
-      font-size: 18px; }
-  .row:nth-child(2) #img-bar img {
-    margin-bottom: 10px; }
-  .row:nth-child(2) #img-bar div:nth-child(3) a {
-    font-size: 20px;
-    float: right;
-    padding: 0 100px 0 0; }
-  .row:nth-child(1) .article-container #article h3 {
-    font-size: 18px; }
-  .row:nth-child(1) .article-container #article p {
-    font-size: 14px; }
-  .row:nth-child(1) .article-container #article a {
-    font-size: 14px; }
-  #categories #readCategories h3 {
-    font-size: 18px; }
-  #categories #readCategories p {
-    font-size: 13px; } }
+  header .container .row div:nth-child(2) {
+    display: none; }
+  .container .row:nth-child(2) #img-bar .float-left {
+    padding-bottom: 20px; }
+  .container .row:nth-child(3) #categories .row #readCategories img {
+    float: none;
+    margin-bottom: 20px; }
+  .container .row:nth-child(3) #categoriesList {
+    margin-bottom: 20px; }
+    .container .row:nth-child(3) #categoriesList div h3 {
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 20px; }
+  footer .container .row .float-left p {
+    float: none;
+    text-align: center; }
+  footer .container .row .float-right p {
+    float: none;
+    text-align: center; } }
 
