@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "css/Stylesheet.css",
+    "inputFile": "scss/Stylesheet.scss"
+  },
+  {
+    "outputFile": "js/index.es5.js",
+    "inputFile": "js/index.js"
+  },
+  {
+    "outputFile": "js/script.es5.js",
+    "inputFile": "js/script.js"
+  }
+]
